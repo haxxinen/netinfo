@@ -15,11 +15,11 @@ netinfo="`pwd`/netinfo.py"
 os=`uname`
 case `uname` in
     'Linux' )
-        profile=`[ $os == 'Linux' ] && echo '.profile'`
+        profile='.profile'
     'Darwin' )
-        profile=`[ $os == 'Darwin' ] && echo '.bash_profile'`
+        profile='.bash_profile'
     * )
-        profile=""
+        profile=''
 esac
 
 echo >> ~/$profile
