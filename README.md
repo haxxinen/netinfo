@@ -12,7 +12,7 @@ $ sudo pip3 install virtualenv
 $ git clone https://github.com/haxxinen/netinfo && mv netinfo .netinfo && cd .netinfo
 $ virtualenv -p python3 .venv
 $ . .venv/bin/activate
-(.venv) netinfo$ pip3 install -r requirements.txt && deactivate
+(.venv) ~/.netinfo$ pip3 install -r requirements.txt && deactivate
 ```
 
 ##### 2. Link project as alias
