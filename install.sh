@@ -15,11 +15,11 @@ netinfo="`pwd`/netinfo.py"
 os=`uname`
 case `uname` in
     'Linux' )
-        profile='.profile'
+        profile='.profile' ;;
     'Darwin' )
-        profile='.bash_profile'
+        profile='.bash_profile' ;;
     * )
-        profile=''
+        profile='' ;;
 esac
 
 echo >> ~/$profile
