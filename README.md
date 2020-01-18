@@ -7,7 +7,8 @@ This is a small script that shows infomation about your (default) IP addresses i
 
 ##### 1. Fetch dependencies on local `virtualenv`
 ```console
-$ pip3 install virtualenv
+$ sudo apt-get install python3-pip
+$ sudo pip3 install virtualenv
 $ git clone https://github.com/haxxinen/netinfo && mv netinfo .netinfo && cd .netinfo
 $ virtualenv -p python3 .venv
 $ . .venv/bin/activate
@@ -16,8 +17,8 @@ $ . .venv/bin/activate
 
 ##### 2. Link project as alias
 ```console
-netinfo$ py="`pwd`/.venv/bin/python"
-netinfo$ netinfo="`pwd`/netinfo.py"
+~/.netinfo$ py="`pwd`/.venv/bin/python"
+~/.netinfo$ netinfo="`pwd`/netinfo.py"
 $ echo >> ~/.bash_profile
 $ echo '### netinfo' >> ~/.bash_profile
 $ echo "alias netinfo='$py $netinfo'" >> ~/.bash_profile
