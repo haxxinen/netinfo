@@ -12,7 +12,6 @@ pip3 install -r requirements.txt && deactivate
 py="`pwd`/.venv/bin/python3"
 netinfo="`pwd`/netinfo.py"
 
-os=`uname`
 case `uname` in
     'Linux' )
         profile='.profile' ;;
