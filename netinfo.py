@@ -145,25 +145,15 @@ def trigger():
             print('Not a valid IP address.')
             exit(0)
 
-        obj = json.loads(request('https://www.maxmind.com/geoip/v2.1/city/' + ip + '?demo=1'))
+        obj = json.loads(request('https://ip.pentestit.ru/json?ip=' + ip))
         if 'error' in obj:
             print(obj['error'])
             exit(0)
 
-        traits = obj['traits']
-
-        if 'is_anonymous_proxy' in traits:
-            print('Anonymous proxy.')
-            exit(0)
-
-        city = obj['city'] if 'city' in obj else None
-        country = obj['country']
-        continent = obj['continent']
-
-        print('City: ' + city['names']['en'] if city is not None and 'names' in city else 'City: unknown')
-        print('Country: ' + country['iso_code'] + ' (' + continent['code'] + ')')
-        print('ISP: ' + traits['isp'] + ' (' + (traits['domain'] if 'domain' in traits else 'unknown') + ')')
-        print('IP: ' + ip)
+        print('City: ' + obj['city'])
+        print('Country: ' + obj['country'] + ' (' + obj['timezone'] + ')')
+        print('ISP: ' + obj['isp'] + ' (' + obj['org'] + ')')
+        print('IP: ' + obj['ipaddress'])
 
 
 if __name__ == '__main__':
