@@ -11,8 +11,6 @@ pip3 install -r requirements.txt && deactivate
 # link project as alias
 py="`pwd`/.venv/bin/python3"
 netinfo="`pwd`/netinfo.py"
-profile='.bash_profile'
 
-echo >> ~/$profile
-echo '### netinfo' >> ~/$profile
-echo "alias netinfo='$py $netinfo'" >> ~/$profile
+echo 'Remember to create an alias such as:'
+echo "alias netinfo='$py $netinfo'"
