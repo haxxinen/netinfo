@@ -125,7 +125,7 @@ def trigger():
 
         try:
             r = requests.post('http://canyouseeme.org', data={'port': port})
-            if len(r.text) is not 0:
+            if len(r.text) != 0:
                 print('Not open.' if not re.search('Success', r.text) else 'Open.')
 
         except requests.ConnectionError or requests.ConnectTimeout:
